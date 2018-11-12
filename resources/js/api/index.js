@@ -11,7 +11,7 @@ const api = {
     }
 
     return new Promise(resolve => {
-      axios.get(`/patients?page=${page}&perPage=${perPage}&orderByColumn=${orderByColumn}&orderByDirection=${orderByDirection}`)
+      axios.get(`patients?page=${page}&perPage=${perPage}&orderByColumn=${orderByColumn}&orderByDirection=${orderByDirection}`)
         .then(response => {
           resolve(response)
         })
@@ -20,7 +20,7 @@ const api = {
 
   createPatient: (data) => {
     return new Promise((resolve, reject) => {
-      axios.post('/patient', data)
+      axios.post('patient', data)
         .then(resolve)
         .catch(reject)
     })
@@ -28,7 +28,7 @@ const api = {
 
   editPatient: (data) => {
     return new Promise((resolve, reject) => {
-      axios.put('/patient', data)
+      axios.put('patient', data)
         .then(resolve)
         .catch(reject)
     })
@@ -36,7 +36,7 @@ const api = {
 
   deletePatient: (data) => {
     return new Promise((resolve, reject) => {
-      axios.delete(`/patient/${data.id}`)
+      axios.delete(`patient/${data.id}`)
         .then(resolve)
         .catch(reject)
     })
