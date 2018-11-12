@@ -110,24 +110,6 @@ class PatientModal extends React.Component {
                       <div className="invalid-feedback">{this.errorDescription('weight')}</div>
                     </div>
                   </div>
-
-                  <div className="form-group">
-                    <label className="col-form-label" htmlFor="age">Patient's age *</label>
-
-                    <div className="input-group">
-                      <input onChange={this.props.handleFormFieldChange}
-                             value={this.props.patient.age}
-                             className={`form-control ${this.errorClass('age')}`}
-                             id="age"
-                             type="number"
-                             name="age"
-                             placeholder="Patient's age"
-                             required={true}
-                      />
-
-                      <div className="invalid-feedback">{this.errorDescription('age')}</div>
-                    </div>
-                  </div>
                 </div>
 
                 <input className={`pull-right btn btn-${this.props.modalClass}`} type="submit" value={this.props.title} />
